@@ -22,7 +22,7 @@ Repo for managing my interview prepration.
 ## Medium Questions 
 |Name of Question|Status of Completion|Solution|
 |--:|---|---|
-|![reverse-integer](https://leetcode.com/problems/reverse-integer)| ✔️ ||
+|[reverse-integer](https://leetcode.com/problems/reverse-integer)| ✔️ |[goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#26th-june)|
 |   |   |   |
 |   |   |   |
 |   |   |   |
