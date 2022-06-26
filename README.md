@@ -22,7 +22,7 @@ Repo for managing my interview prepration.
 ## Medium Questions 
 |Name of Question|Status of Completion|Solution|
 |--:|---|---|
-|   |   |   |
+|![reverse-integer](https://leetcode.com/problems/reverse-integer)| ✔️ ||
 |   |   |   |
 |   |   |   |
 |   |   |   |
@@ -40,7 +40,19 @@ Repo for managing my interview prepration.
 |   |   |   |
 
 ## Solutions 
-
+### 26Th June 
+```
+class Solution:
+    def reverse(self, x: int) -> int:    
+        fin_str = ""
+        if x < 0 :
+            fin_str = "-"
+        x = str(abs(x))[::-1]
+        fin_str += x 
+        if (abs(int(x)) > int(2**31 - 1)):
+            return 0 
+        return int(fin_str)
+ ```
 
 
 
