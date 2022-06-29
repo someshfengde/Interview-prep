@@ -24,7 +24,7 @@ Repo for managing my interview prepration.
 |--:|---|---|
 |[reverse-integer](https://leetcode.com/problems/reverse-integer)| ✅ |[goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#26th-june)|
 |[3sum](https://leetcode.com/problems/3sum/)| ✅ | [goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#28th-june)   |
-|   |   |   |
+|[add-two-numbers](https://leetcode.com/problems/add-two-numbers/)|✅ |  [goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#29th-june) |
 |   |   |   |
 |   |   |   |
 |   |   |   |
@@ -93,6 +93,48 @@ class Solution:
         return ans_arr
                     
                     
+```
+### 29th June 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        arr_l1 = [] 
+        arr_l1.append(l1.val)
+        while l1.next != None: 
+            l1 = l1.next
+            arr_l1.append(l1.val)
+        
+        arr_l2 = []
+        arr_l2.append(l2.val)
+        
+        while l2.next != None: 
+            l2 =l2.next 
+            arr_l2.append(l2.val)
+        arr_l2.reverse()
+        arr_l1.reverse()
+        
+        addn = int(''.join(map(str, arr_l1))) + int(''.join(map(str,arr_l2)))
+        spt = str(addn)
+        spt = [int(x) for x in spt]
+        spt.reverse()
+        
+        ans_node = ListNode()
+        bptr = ans_node
+        for idx , x in enumerate(spt):
+            while ans_node.next != None: 
+                ans_node = ans_node.next
+            if ans_node.next == None:
+                ans_node.val = x
+                if idx != len(spt) -1 :
+                    ans_node.next = ListNode()
+            
+
+        return bptr 
 ```
 
 
