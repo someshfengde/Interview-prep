@@ -6,6 +6,7 @@ Repo for managing my interview prepration.
 ## Resources: 
 * Leetcode: https://leetcode.com/
 * CodeForces: https://codeforces.com/
+* Strivers sheet: https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
 
 ## Overall Progress. 
 ## Easy questions 
@@ -25,7 +26,7 @@ Repo for managing my interview prepration.
 |[reverse-integer](https://leetcode.com/problems/reverse-integer)| ✅ |[goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#26th-june)|
 |[3sum](https://leetcode.com/problems/3sum/)| ✅ | [goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#28th-june)   |
 |[add-two-numbers](https://leetcode.com/problems/add-two-numbers/)|✅ |  [goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#29th-june) |
-|   |   |   |
+|[set-matrix-zero](https://takeuforward.org/data-structure/set-matrix-zero/)|✅ |[goto_day](https://github.com/someshfengde/Interview-prep/blob/main/README.md#13th-july)  |
 |   |   |   |
 |   |   |   |
 
@@ -137,4 +138,18 @@ class Solution:
         return bptr 
 ```
 
+### 13th July
+```
+import numpy as np 
+matrix = np.array([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
+
+sol_matrix= np.array(matrix) #np.ones(matrix.shape)
+for row_no , x in enumerate(matrix): 
+    for col_no, y in enumerate(x):
+        if y == 0 :
+            sol_matrix[:,col_no] = 0
+            sol_matrix[row_no,:] = 0 
+
+print(sol_matrix)
+```
 
